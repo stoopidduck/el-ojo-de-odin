@@ -896,3 +896,21 @@ ol.steps { padding: 0; }
 @media (max-width: 520px) {
   .gallery--four { grid-template-columns: minmax(0, 280px); }
 }
+
+/* ---------- Portada: «Descender» en el flujo, logo adaptado a la altura ---------- */
+.hero {
+  display: flex; flex-direction: column; align-items: center;
+  padding-bottom: 28px;
+}
+.hero-content { margin-block: auto; }
+.scroll-cue {
+  position: relative; z-index: 2;
+  bottom: auto; left: auto; transform: none;
+  margin-top: clamp(20px, 3vh, 36px);
+}
+.hero-logo img {
+  width: clamp(260px, min(92vw, calc((100svh - 420px) * 2)), 820px);
+}
+@media (max-height: 560px) {
+  .scroll-cue { display: none; }
+}
