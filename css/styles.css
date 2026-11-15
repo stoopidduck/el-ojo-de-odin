@@ -918,3 +918,7 @@ ol.steps { padding: 0; }
 /* Más aire entre los botones y «Descender» en pantallas de altura media (p. ej. 1600×900) */
 .hero { padding-top: calc(var(--header-h) + 24px); padding-bottom: 12px; }
 .hero-logo img { width: clamp(260px, min(92vw, calc((100svh - 480px) * 2)), 820px); }
+/* Respaldo para navegadores sin la unidad svh */
+@supports not (height: 1svh) {
+  .hero-logo img { width: clamp(260px, min(92vw, calc((100vh - 480px) * 2)), 820px); }
+}
